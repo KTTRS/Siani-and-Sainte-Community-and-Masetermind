@@ -1,0 +1,1103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@1,500&display=swap');
+
+/* =====================================================
+   ORGANIC FUTURISM — Cult-coded visual identity.
+   Resin · glass · fog · silicone · deep forest matte · moss.
+   Hypermodern physical-digital. Sacred interface.
+   Replaces Direction D Tactical Mil-Spec on brand surfaces.
+   ===================================================== */
+
+.of-root {
+  /* ── Everglade primary ─────────────────────────── */
+  --eg-950: #0C1712;
+  --eg-900: #12221A;
+  --eg-800: #193024;
+  --eg-700: #1F3E2D;
+  --eg-600: #28513A;
+
+  /* ── Lime accent (rare spark) ──────────────────── */
+  --lime-core: #C7FF3E;
+  --lime-soft: #E2FF9B;
+  --lime-glow: rgba(199, 255, 62, 0.32);
+
+  /* ── Mint gel system ──────────────────────────── */
+  --mint-200: #E6FFE8;
+  --mint-300: #D9FBD9;
+  --mint-500: #A7E9BC;
+
+  /* ── Fog / glass neutrals ─────────────────────── */
+  --fog-100: #F6F8F7;
+  --fog-200: #E9EEEC;
+  --fog-500: rgba(255, 255, 255, 0.20);
+
+  /* ── Obsidian shadow stack ────────────────────── */
+  --ob-900: rgba(0, 0, 0, 0.64);
+  --ob-700: rgba(0, 0, 0, 0.40);
+  --ob-500: rgba(0, 0, 0, 0.22);
+  --ob-300: rgba(0, 0, 0, 0.12);
+
+  /* ── Emotional ────────────────────────────────── */
+  --calm: #4C8064;
+  --warmth: #F6EFD9;
+  --pressure: #2D1E18;
+
+  /* ── Type ─────────────────────────────────────── */
+  /* Wealth = SIANI only (italic display, Cormorant substitute) */
+  --font-siani: 'Cormorant Garamond', 'Wealth', 'Didot', serif;
+  /* Neue Haas Grotesk = brand wordmark + UI + body (Inter substitute) */
+  --font-ui: 'Inter', 'Neue Haas Grotesk', system-ui, -apple-system, sans-serif;
+
+  position: fixed;
+  inset: 0;
+  background: var(--eg-950);
+  color: var(--mint-200);
+  font-family: var(--font-ui);
+  overflow: hidden;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  isolation: isolate;
+}
+.of-root *,
+.of-root *::before,
+.of-root *::after { box-sizing: border-box; }
+
+/* ── The Void: forest atmosphere with whisper noise ─ */
+.of-void {
+  position: absolute;
+  inset: 0;
+  background:
+    /* edge vignette — pulls eye to center */
+    radial-gradient(ellipse 110% 90% at 50% 50%, transparent 50%, rgba(0, 0, 0, 0.45) 100%),
+    radial-gradient(ellipse 80% 60% at 50% 110%, rgba(199, 255, 62, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 80% at 30% -10%, rgba(167, 233, 188, 0.04) 0%, transparent 55%),
+    linear-gradient(180deg, var(--eg-950) 0%, var(--eg-900) 60%, var(--eg-950) 100%);
+  z-index: 0;
+}
+.of-void::before {
+  /* whisper grain */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9  0 0 0 0 1  0 0 0 0 0.9  0 0 0 0.025 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.of-screen {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(20px, 4.5vh, 36px) clamp(20px, 6vw, 32px);
+}
+
+/* ── Top bar (whisper meta) ─────────────────────── */
+.of-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vh, 16px);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mint-200);
+  opacity: 0.92;
+  flex-shrink: 0;
+}
+.of-meta-dot {
+  /* lime spark — solid fill, no glow (spec: glow never on badges/dots). */
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lime-core);
+  margin-right: 10px;
+  vertical-align: middle;
+  animation: of-pulse 3.2s ease-in-out infinite;
+}
+@keyframes of-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.92); }
+}
+
+/* ── Mast (logo + invitation) ───────────────────── */
+.of-mast {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: clamp(20px, 3.5vh, 36px);
+}
+
+.of-eyebrow {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vh, 16px);
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--mint-500);
+  opacity: 0.85;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-align: center;
+}
+.of-eyebrow > span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* ── SIANI — hero wordmark (the brand mark, large) ──
+   Uses the SIANI PNG (white-on-black) as a luminance mask so the
+   element shape IS the letterforms. Fill with a fog→mint vertical
+   gradient for the 3D look, then stack drop-shadows for depth.
+   A second oversized horizontal sheen layer drifts slowly across
+   the letterforms — ritual shimmer, never flashy. */
+.of-hero-siani {
+  display: block;
+  margin: 0 auto;
+  width: clamp(340px, 82vw, 640px);
+  /* Source text is roughly 360×140 in the 500×500 canvas → 2.57:1.
+     Match aspect so the wordmark fills the box without distortion. */
+  aspect-ratio: 360 / 140;
+  /* Dimensional fog→mint fill — top sheen, mint underbody —
+     PLUS a horizontal sheen highlight that drifts via background-position.
+     The two backgrounds are stacked: vertical gradient (full-cover) + a
+     wide sheen band (200% wide) that animates from -100% to 100%. */
+  background:
+    /* sheen band — bright fog flash that drifts across */
+    linear-gradient(105deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.55) 48%,
+      rgba(255, 255, 255, 0.85) 50%,
+      rgba(255, 255, 255, 0.55) 52%,
+      transparent 70%) 0% 0% / 220% 100% no-repeat,
+    /* base body fill */
+    linear-gradient(180deg,
+      #FFFFFF 0%,
+      var(--fog-100) 22%,
+      var(--mint-200) 62%,
+      var(--mint-500) 92%,
+      #87D6A2 100%) 0% 0% / 100% 100% no-repeat;
+  background-position: -120% 0%, 0% 0%;
+  animation: of-siani-shimmer 7.6s ease-in-out infinite;
+  -webkit-mask-size: 138% auto;
+  mask-size: 138% auto;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-mode: luminance;
+  mask-mode: luminance;
+  /* Multi-layer 3D shadow — top inner highlight implied by gradient,
+     tight chiseled drop, soft long shadow. */
+  filter:
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.55))
+    drop-shadow(0 3px 0 rgba(20, 44, 30, 0.28))
+    drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 26px 42px rgba(0, 0, 0, 0.45));
+}
+@keyframes of-siani-shimmer {
+  /* Sheen drifts left → right across the wordmark, then rests offscreen
+     for ~5s so the effect is a rare ritual highlight, not constant glitter. */
+  0%   { background-position: -120% 0%, 0% 0%; }
+  35%  { background-position:  220% 0%, 0% 0%; }
+  100% { background-position:  220% 0%, 0% 0%; }
+}
+.of-siani-meta {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: clamp(11px, 1.3vh, 13px);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--mint-500);
+  vertical-align: middle;
+}
+
+.of-tagline-LEGACY {
+  font-family: var(--font-ui);
+  font-weight: 400;
+  font-size: clamp(13px, 1.6vh, 15.5px);
+  letter-spacing: 0.02em;
+  line-height: 1.55;
+  color: var(--mint-200);
+  opacity: 0.78;
+  margin: 0;
+  max-width: 38ch;
+}
+
+/* ── The Orb: water-glass + silicone, breathing ─── */
+.of-orb-bay {
+  position: relative;
+  width: clamp(180px, 42vh, 280px);
+  height: clamp(180px, 42vh, 280px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Soft lime + mint halo behind the sphere. Bigger and bottom-weighted so
+   it reads as warmth pooling around the glass rather than a UFO ring.
+   Tier-3 glow exception — the orb is the only object that may glow. */
+.of-orb-halo {
+  position: absolute;
+  inset: -22%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 62%, rgba(199, 255, 62, 0.28) 0%, rgba(199, 255, 62, 0.10) 30%, transparent 58%),
+    radial-gradient(circle at 50% 50%, rgba(167, 233, 188, 0.16) 0%, transparent 60%);
+  filter: blur(34px);
+  animation: of-halo-breathe 5.6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes of-halo-breathe {
+  0%, 100% { transform: scale(1);    opacity: 0.55; filter: blur(34px); }
+  50%      { transform: scale(1.05); opacity: 0.78; filter: blur(40px); }
+}
+/* Glass sphere shell — clear, with a dark rim (refraction) and the
+   portrait floating inside. The sphere itself is mostly transparent
+   except for the rim shadow + the specular highlights layered on top. */
+.of-orb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    /* faint internal atmosphere (very subtle warm pool at bottom) */
+    radial-gradient(circle at 50% 78%, rgba(255, 196, 110, 0.10) 0%, transparent 55%),
+    /* dark rim refraction — reads as the curved edge of a glass ball */
+    radial-gradient(circle at 50% 50%, transparent 62%, rgba(8, 14, 11, 0.55) 86%, rgba(0, 0, 0, 0.85) 100%);
+  box-shadow:
+    /* inner rim refraction — a thin dark line just inside the edge */
+    inset 0 0 0 1px rgba(231, 255, 232, 0.22),
+    inset 0 -28px 60px rgba(8, 14, 11, 0.55),
+    /* outer cast shadow on the backdrop — heavy, sphere has weight */
+    0 38px 90px rgba(0, 0, 0, 0.78),
+    0 18px 36px rgba(0, 0, 0, 0.55),
+    /* faint outer lime spill — never a "glow on chrome" because the
+       orb is the only Tier-3 charged object */
+    0 0 48px rgba(199, 255, 62, 0.10);
+  animation: of-breathe 4.8s ease-in-out infinite;
+  overflow: hidden;
+}
+/* Siani's face inside the sphere — dominant, photographic, warm. No
+   screen-blend (it washed her out). A soft radial mask feathers the
+   portrait into the glass so it doesn't look pasted onto a circle. */
+.of-orb-portrait {
+  position: absolute;
+  inset: 8%;
+  border-radius: 50%;
+  background-position: center 32%;
+  background-size: 116% auto;
+  background-repeat: no-repeat;
+  opacity: 0.96;
+  filter: contrast(1.06) brightness(0.92) saturate(1.04);
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 58%, rgba(0, 0, 0, 0.7) 78%, transparent 96%);
+  mask-image: radial-gradient(circle at 50% 50%, #000 58%, rgba(0, 0, 0, 0.7) 78%, transparent 96%);
+  z-index: 1;
+}
+.of-orb-portrait::after {
+  /* Warm bottom rim-light + soft lime kiss on top-left. Sells the
+     "encased in glass" feel by suggesting light wrapping around the
+     subject from inside the sphere. */
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 55% 82%, rgba(255, 168, 92, 0.28) 0%, transparent 42%),
+    radial-gradient(circle at 28% 22%, rgba(199, 255, 62, 0.10) 0%, transparent 46%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+/* Specular highlights — THE glass-sphere signature. Two lights:
+   (1) a large soft top-left ambient bloom, and
+   (2) a small hard bright crescent at upper-right (the "hot spot"
+       that tells the eye this is a glass ball, not a flat circle).
+   The whole layer drifts a few degrees over 28s — keeps the surface
+   feeling alive without ever moving the chrome around it. */
+.of-orb-glass {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  animation: of-glass-drift 28s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes of-glass-drift {
+  0%, 100% { transform: rotate(-3deg); }
+  50%      { transform: rotate(3deg); }
+}
+.of-orb-glass::before {
+  /* soft top-left ambient bloom */
+  content: '';
+  position: absolute;
+  top: 6%;
+  left: 14%;
+  width: 46%;
+  height: 32%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.18) 38%, transparent 70%);
+  filter: blur(6px);
+}
+.of-orb-glass::after {
+  /* hard upper-right specular — the signature glass hot spot.
+     Small + bright + tight. This is what tells the eye it's a sphere. */
+  content: '';
+  position: absolute;
+  top: 14%;
+  right: 14%;
+  width: 18%;
+  height: 22%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.55) 24%, transparent 62%);
+  filter: blur(1.5px);
+}
+@keyframes of-breathe {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.018); }
+}
+/* State caption beneath the sphere — "LISTENING" / "SPEAKING" / etc.
+   Uppercase, letter-spaced, lime-soft. No glow. */
+.of-orb-cap {
+  position: absolute;
+  bottom: -52px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  white-space: nowrap;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* ── Gel pill button (mint-500 → mint-300) ──────── */
+.of-cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.6vh, 14px);
+  align-items: stretch;
+  flex-shrink: 0;
+}
+
+.of-btn {
+  position: relative;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: clamp(14px, 1.7vh, 16px);
+  letter-spacing: 0.06em;
+  padding: clamp(16px, 2.6vh, 22px) clamp(24px, 6vw, 32px);
+  border-radius: 999px;
+  cursor: pointer;
+  border: none;
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1), filter 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  text-align: center;
+  width: 100%;
+  isolation: isolate;
+  overflow: hidden;
+}
+/* GEL pill — multi-layer depth: bottom shadow band, body gradient,
+   inner ring, top specular sheen, faint grain. Spec: no glow. */
+.of-btn.gel {
+  color: var(--eg-950);
+  background:
+    /* top specular reflection band */
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 28%),
+    /* body — silicone-mint gel curvature */
+    radial-gradient(ellipse 80% 120% at 50% -10%, var(--mint-200) 0%, var(--mint-500) 55%, #87D6A2 100%);
+  box-shadow:
+    /* inner top highlight */
+    inset 0 2px 0 rgba(255, 255, 255, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    /* inner side bevels */
+    inset 1px 0 0 rgba(255, 255, 255, 0.20),
+    inset -1px 0 0 rgba(0, 0, 0, 0.08),
+    /* inner bottom shadow — gives the gel "weight" */
+    inset 0 -8px 14px rgba(20, 44, 30, 0.34),
+    inset 0 -2px 0 rgba(20, 44, 30, 0.22),
+    /* outer drop — tight + soft */
+    0 2px 0 rgba(255, 255, 255, 0.10),
+    0 6px 12px rgba(0, 0, 0, 0.42),
+    0 18px 36px rgba(0, 0, 0, 0.55);
+}
+.of-btn.gel::before {
+  /* top sheen highlight band — light passing across the surface */
+  content: '';
+  position: absolute;
+  top: 4%;
+  left: 8%;
+  right: 8%;
+  height: 38%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+  filter: blur(0.5px);
+}
+.of-btn.gel::after {
+  /* faint silicone grain */
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.05  0 0 0 0 0.18  0 0 0 0 0.08  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  mix-blend-mode: multiply;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+.of-btn.gel > * { position: relative; z-index: 2; }
+.of-btn.gel:hover {
+  /* Subtle lift — extra weight in the drop shadow, not a glow.
+     Spec: glow never on buttons. */
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.90),
+    inset 0 1px 0 rgba(255, 255, 255, 0.60),
+    inset 1px 0 0 rgba(255, 255, 255, 0.22),
+    inset -1px 0 0 rgba(0, 0, 0, 0.10),
+    inset 0 -10px 16px rgba(20, 44, 30, 0.38),
+    inset 0 -2px 0 rgba(20, 44, 30, 0.24),
+    0 3px 0 rgba(255, 255, 255, 0.10),
+    0 10px 18px rgba(0, 0, 0, 0.48),
+    0 24px 44px rgba(0, 0, 0, 0.58);
+  filter: brightness(1.03);
+}
+.of-btn.gel:active {
+  transform: translateY(3px);
+  box-shadow:
+    inset 0 2px 8px rgba(20, 44, 30, 0.42),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.10),
+    0 2px 6px rgba(0, 0, 0, 0.40),
+    0 6px 12px rgba(0, 0, 0, 0.30);
+  filter: brightness(0.96);
+}
+
+/* GHOST — also gets dimensional treatment: hairline rim + inset shadow */
+.of-btn.ghost {
+  color: var(--mint-200);
+  background:
+    linear-gradient(180deg, rgba(231, 255, 232, 0.04) 0%, rgba(231, 255, 232, 0) 60%),
+    linear-gradient(180deg, rgba(18, 34, 26, 0.6) 0%, rgba(12, 23, 18, 0.6) 100%);
+  border: 1px solid rgba(231, 255, 232, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.30),
+    0 4px 10px rgba(0, 0, 0, 0.35),
+    0 12px 24px rgba(0, 0, 0, 0.40);
+}
+.of-btn.ghost:hover {
+  /* Lift + brighten the rim hairline. Border becomes more present. */
+  transform: translateY(-1px);
+  border-color: rgba(231, 255, 232, 0.28);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.30),
+    0 6px 14px rgba(0, 0, 0, 0.40),
+    0 16px 30px rgba(0, 0, 0, 0.45);
+}
+.of-btn.ghost:active {
+  transform: translateY(2px);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.30);
+}
+.of-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Foot ───────────────────────────────────────── */
+.of-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: clamp(13px, 1.6vh, 16px);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mint-200);
+  opacity: 0.92;
+  flex-shrink: 0;
+  margin-top: clamp(16px, 2.4vh, 24px);
+  gap: 16px;
+}
+.of-foot-powered {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.of-foot-powered-label {
+  font-size: clamp(10px, 1.2vh, 12px);
+  letter-spacing: 0.28em;
+  color: var(--mint-500);
+  opacity: 0.7;
+}
+.of-foot-sainte {
+  height: clamp(11px, 1.5vh, 14px);
+  width: auto;
+  display: inline-block;
+  filter: invert(1) brightness(1.05) drop-shadow(0 1px 0 rgba(0,0,0,0.5));
+  opacity: 0.85;
+  vertical-align: middle;
+}
+.of-foot a { color: inherit; text-decoration: none; transition: opacity 240ms ease; }
+.of-foot a:hover { opacity: 1; color: var(--mint-200); }
+
+/* ── Sheet (Depth 1 floating surface) ───────────── */
+.of-scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(12, 23, 18, 0.78);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  z-index: 50;
+}
+.of-sheet {
+  position: fixed;
+  left: clamp(8px, 2vw, 16px);
+  right: clamp(8px, 2vw, 16px);
+  bottom: clamp(8px, 2vh, 16px);
+  background: linear-gradient(180deg, var(--eg-800) 0%, var(--eg-900) 100%);
+  border-radius: 28px;
+  padding: clamp(20px, 3vh, 28px) clamp(20px, 5vw, 28px) max(env(safe-area-inset-bottom), 24px);
+  z-index: 51;
+  box-shadow:
+    inset 0 1px 0 rgba(231, 255, 232, 0.06),
+    0 -20px 60px var(--ob-900),
+    0 30px 80px var(--ob-900);
+  border: 1px solid rgba(231, 255, 232, 0.06);
+}
+.of-sheet-handle {
+  width: 44px;
+  height: 4px;
+  background: rgba(231, 255, 232, 0.18);
+  border-radius: 999px;
+  margin: 0 auto clamp(14px, 2vh, 20px);
+}
+.of-sheet-eyebrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: clamp(10px, 1.1vh, 11.5px);
+  letter-spacing: 0.32em;
+  color: var(--mint-500);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+.of-sheet-close {
+  background: rgba(231, 255, 232, 0.06);
+  border: 1px solid rgba(231, 255, 232, 0.10);
+  color: var(--mint-200);
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  font-family: var(--font-ui);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 240ms ease;
+}
+.of-sheet-close:hover { background: rgba(231, 255, 232, 0.10); }
+
+.of-sheet-title {
+  /* Sheet headers use Neue Haas (Inter sub) — no italic, no serif. */
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: clamp(28px, 6vw, 38px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--fog-100);
+  margin: 8px 0 clamp(18px, 2.6vh, 24px);
+}
+
+.of-form { display: flex; flex-direction: column; gap: clamp(10px, 1.6vh, 14px); }
+
+.of-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: rgba(12, 23, 18, 0.5);
+  border: 1px solid rgba(231, 255, 232, 0.10);
+  border-radius: 16px;
+  padding: clamp(10px, 1.6vh, 14px) clamp(14px, 4vw, 18px);
+  transition: border-color 240ms ease, background 240ms ease;
+}
+.of-field:focus-within {
+  border-color: rgba(199, 255, 62, 0.4);
+  background: rgba(12, 23, 18, 0.7);
+}
+.of-field-label {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: clamp(10px, 1.1vh, 11px);
+  letter-spacing: 0.28em;
+  color: var(--mint-500);
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.of-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-ui);
+  font-size: clamp(15px, 1.8vh, 17px);
+  color: var(--fog-100);
+  padding: 0;
+  width: 100%;
+}
+.of-input::placeholder { color: var(--mint-500); opacity: 0.5; }
+
+.of-err {
+  border: 1px solid rgba(194, 109, 90, 0.4);
+  background: rgba(194, 109, 90, 0.08);
+  color: #E5B5A5;
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: clamp(12px, 1.4vh, 13px);
+  letter-spacing: 0.02em;
+  padding: clamp(10px, 1.4vh, 12px) clamp(14px, 4vw, 18px);
+  border-radius: 12px;
+}
+
+.of-sheet-foot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: clamp(8px, 1.2vh, 12px);
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: clamp(11px, 1.2vh, 12px);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.of-sheet-foot a {
+  color: var(--mint-500);
+  text-decoration: none;
+  transition: color 240ms ease;
+}
+.of-sheet-foot a:hover { color: var(--mint-200); }
+
+/* ── Reduced motion ─────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .of-orb,
+  .of-orb-halo,
+  .of-orb-glass,
+  .of-hero-siani,
+  .of-meta-dot { animation: none; }
+  .of-btn { transition: none; }
+  .of-resin,
+  .of-silicone,
+  .of-glass,
+  .of-card-lift { transition: none; }
+  .of-resin::after,
+  .of-noise::after { display: none; }
+}
+
+/* .of-bg — Organic Futurism universal page ground. Drop on any full-screen
+   container in place of pure black. Resin matte with soft mint underglow
+   and 2.5% atmospheric noise. Never neon, never lime, never #000. */
+.of-bg {
+  position: relative;
+  background-color: hsl(var(--everglade-950));
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 0%, hsl(var(--everglade-700) / 0.40) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 100%, hsl(var(--mint-500) / 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 10% 90%, hsl(var(--everglade-800) / 0.50) 0%, transparent 60%);
+  isolation: isolate;
+}
+.of-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: overlay;
+}
+.of-bg > * { position: relative; z-index: 1; }
+
+/* Physical material kit — resin / silicone / glass / moss / fog-input.
+   No glow. Glow stays on orb / vault / arc-unlock. */
+
+.of-resin,
+.of-silicone,
+.of-glass,
+.of-moss,
+.of-fog-input,
+.of-card-lift {
+  --_eg-950: var(--eg-950, #0C1712);
+  --_eg-900: var(--eg-900, #12221A);
+  --_eg-800: var(--eg-800, #193024);
+  --_eg-700: var(--eg-700, #1F3E2D);
+  --_mint-200: var(--mint-200, #E6FFE8);
+  --_mint-500: var(--mint-500, #A7E9BC);
+  --_fog-100: var(--fog-100, #F6F8F7);
+  --_ob-300: var(--ob-300, rgba(0,0,0,0.12));
+  --_ob-500: var(--ob-500, rgba(0,0,0,0.22));
+  --_ob-700: var(--ob-700, rgba(0,0,0,0.40));
+  --_ob-900: var(--ob-900, rgba(0,0,0,0.64));
+}
+
+/* Tier-1 floating card. */
+.of-resin {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(168deg, var(--_eg-800) 0%, var(--_eg-900) 70%, var(--_eg-950) 100%);
+  border: 1px solid rgba(231, 255, 232, 0.06);
+  border-radius: 18px;
+  box-shadow:
+    inset 0 1px 0 rgba(231, 255, 232, 0.08),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(0, 0, 0, 0.35),
+    0 8px 16px -6px var(--_ob-700),
+    0 22px 40px -12px var(--_ob-900);
+}
+.of-resin::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(120% 60% at 30% -10%, rgba(255,255,255,0.05), transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+.of-resin::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9  0 0 0 0 1  0 0 0 0 0.9  0 0 0 0.018 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+.of-resin > * { position: relative; z-index: 2; }
+
+/* Touchable raised gel. */
+.of-silicone {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, var(--_eg-700) 0%, var(--_eg-800) 55%, var(--_eg-900) 100%);
+  border: 1px solid rgba(231, 255, 232, 0.10);
+  border-radius: 20px;
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.10),
+    inset 0 -1.5px 0 rgba(0, 0, 0, 0.55),
+    0 2px 0 rgba(0, 0, 0, 0.40),
+    0 10px 22px -6px var(--_ob-700),
+    0 28px 46px -14px var(--_ob-900);
+}
+.of-silicone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(80% 40% at 50% 0%, rgba(255,255,255,0.07), transparent 60%);
+  pointer-events: none;
+}
+
+/* Frosted plate for modals / scrims. */
+.of-glass {
+  position: relative;
+  background: rgba(25, 48, 36, 0.55);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
+  backdrop-filter: blur(22px) saturate(140%);
+  border: 1px solid rgba(231, 255, 232, 0.10);
+  border-radius: 20px;
+  box-shadow:
+    inset 0 1px 0 rgba(231, 255, 232, 0.08),
+    0 18px 40px -10px var(--_ob-700),
+    0 36px 80px -20px var(--_ob-900);
+}
+
+/* Matte heavy panel for long copy. */
+.of-moss {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(180deg, #1A2E22 0%, #142519 100%);
+  border: 1px solid rgba(231, 255, 232, 0.05);
+  border-radius: 16px;
+  box-shadow:
+    inset 0 1px 0 rgba(231, 255, 232, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    0 6px 14px -6px var(--_ob-700);
+}
+.of-moss::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.85  0 0 0 0 0.95  0 0 0 0 0.85  0 0 0 0.022 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.55;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+.of-moss > * { position: relative; }
+
+/* Sunken well for text inputs. */
+.of-fog-input {
+  background: rgba(12, 23, 18, 0.72);
+  border: 1px solid rgba(231, 255, 232, 0.08);
+  border-radius: 12px;
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(231, 255, 232, 0.04);
+  transition: border-color 240ms ease, box-shadow 240ms ease;
+}
+.of-fog-input:focus-within {
+  border-color: rgba(231, 255, 232, 0.18);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(231, 255, 232, 0.08);
+}
+
+/* Physical press recipe. */
+.of-press {
+  transition:
+    transform 180ms cubic-bezier(0.2, 0, 0.2, 1),
+    box-shadow 240ms cubic-bezier(0.2, 0, 0.2, 1),
+    filter 180ms linear;
+}
+.of-press:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+.of-press:active {
+  transform: translateY(1px);
+  filter: brightness(0.92);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.32) !important;
+}
+
+/* Hover elevation for cards. */
+.of-card-lift {
+  transition: transform 240ms cubic-bezier(0.2, 0, 0.2, 1),
+              box-shadow 320ms cubic-bezier(0.2, 0, 0.2, 1);
+}
+.of-card-lift:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(231, 255, 232, 0.10),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(0, 0, 0, 0.35),
+    0 14px 28px -8px var(--_ob-700),
+    0 36px 56px -16px var(--_ob-900);
+}
+
+/* Whisper grain utility. */
+.of-noise { position: relative; isolation: isolate; }
+.of-noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9  0 0 0 0 1  0 0 0 0 0.9  0 0 0 0.022 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 1;
+}
+
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Depth polish follow-up — material differentiation, signature moments.
+   These compose with the existing tier/material kit. No new palette, no
+   glow on text/buttons/headers, no bouncy motion. All animations gated by
+   prefers-reduced-motion. Light direction follows the locked
+   --key-light-x/y on :root so signatures agree with the ground.
+   ─────────────────────────────────────────────────────────────────────── */
+
+/* Fog-glass — distinct from .of-resin (cards) and .of-tier-3 (modals).
+   Adds frosted blur + cool fog tint over the host material so sheets read
+   as "looking through misted glass" instead of another lifted card.
+   Layered as a non-blocking overlay so it composes onto .of-tier-3. */
+.of-fog-glass {
+  position: relative;
+  isolation: isolate;
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+  backdrop-filter: blur(20px) saturate(135%);
+}
+.of-fog-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(180deg,
+      rgba(230, 255, 232, 0.045) 0%,
+      rgba(230, 255, 232, 0.012) 24%,
+      rgba(12, 23, 18, 0.18) 100%);
+  mix-blend-mode: screen;
+  z-index: 0;
+}
+.of-fog-glass > * { position: relative; z-index: 1; }
+
+/* Login signature — soft floor reflection beneath the orb. Stretches to
+   ~1.4× the orb width, fades out, sits on the floor of .of-orb-bay so the
+   orb feels physically present in a room rather than floating in void. */
+.of-orb-floor {
+  position: absolute;
+  left: 50%;
+  bottom: -8%;
+  transform: translateX(-50%);
+  width: 138%;
+  height: 22%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(50% 100% at 50% 0%,
+      rgba(230, 255, 232, 0.10) 0%,
+      rgba(167, 233, 188, 0.05) 32%,
+      transparent 72%);
+  filter: blur(10px);
+  opacity: 0.85;
+}
+/* Login signature — receding room wash behind the orb. Faint vertical
+   gradient that extends the key-light direction down past the orb so the
+   eye reads "deep room", not "panel". */
+.of-orb-room {
+  position: absolute;
+  inset: -45% -30% -30% -30%;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(60% 50% at var(--key-light-x) 18%,
+      rgba(246, 239, 217, 0.040) 0%,
+      rgba(246, 239, 217, 0.012) 36%,
+      transparent 64%),
+    radial-gradient(50% 40% at 50% 96%,
+      rgba(8, 16, 12, 0.55) 0%,
+      transparent 70%);
+}
+
+/* Home hero — deeper key-light pool. Layers a tighter warm radial over
+   the existing .qh-bg cathedral light so the upper-left has a real "sun
+   bleed" rather than ambient haze. Sits behind the orb pill. */
+.of-hero-key-pool {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(38% 30% at var(--key-light-x) 14%,
+      rgba(246, 239, 217, 0.075) 0%,
+      rgba(246, 239, 217, 0.020) 38%,
+      transparent 68%);
+  mix-blend-mode: screen;
+}
+/* Home hero — horizon line. A near-invisible 1px hairline that sits
+   ~62vh down, with a gradient mask, suggesting the floor meets a far wall
+   without any literal architecture. */
+.of-hero-horizon {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 62%;
+  height: 1px;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(230, 255, 232, 0.06) 22%,
+    rgba(230, 255, 232, 0.10) 50%,
+    rgba(230, 255, 232, 0.06) 78%,
+    transparent 100%);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
+}
+
+/* Vault — deeper void layer for the unlock / hero moment. Stacks an extra
+   everglade-950 wash with a warmth-stripping inner shadow so the vault
+   "opens onto" a deeper room than the rest of the app. */
+.of-vault-deep-void {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(120% 80% at 50% 100%,
+      rgba(8, 16, 12, 0.85) 0%,
+      rgba(8, 16, 12, 0.32) 55%,
+      transparent 78%),
+    linear-gradient(180deg,
+      transparent 35%,
+      rgba(8, 16, 12, 0.45) 100%);
+  box-shadow:
+    inset 0 -32px 64px rgba(0, 0, 0, 0.55),
+    inset 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Drop reveal — cast shadow under elevated cards that tracks the locked
+   key-light vector (top-left → bottom-right). Pure visual utility; pair
+   with any rounded card. The cast pool sits beneath the card and bleeds
+   slightly to the lower-right to match the warm key light. */
+.of-cast-shadow {
+  position: relative;
+  isolation: isolate;
+}
+.of-cast-shadow::after {
+  content: '';
+  position: absolute;
+  left: 6%;
+  right: -2%;
+  bottom: -14px;
+  height: 26px;
+  pointer-events: none;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(50% 100% at 42% 0%,
+    rgba(0, 0, 0, 0.52) 0%,
+    rgba(0, 0, 0, 0.22) 38%,
+    transparent 72%);
+  filter: blur(10px);
+  /* Default off — only paints once the card is revealed (tracked via
+     framer-motion useInView in the host). Pairs with the active card
+     reveal so the cast pool feels like the card landing in light from the
+     locked --key-light vector, not a permanent drop shadow. */
+  opacity: 0;
+  transform: translateY(-4px) scale(0.96);
+  transform-origin: 42% 0%;
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.of-cast-shadow.is-revealed::after {
+  opacity: 0.9;
+  transform: translateY(0) scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .of-cast-shadow::after { transition: none; }
+  .of-cast-shadow.is-revealed::after { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .of-fog-glass::before,
+  .of-orb-floor,
+  .of-orb-room,
+  .of-hero-key-pool,
+  .of-hero-horizon,
+  .of-vault-deep-void,
+  .of-cast-shadow::after { transition: none; }
+}
