@@ -1,0 +1,25 @@
+{
+  "id": "T06-food-need",
+  "category": "needs",
+  "modality": "text",
+  "safetyTier": "T0_stable",
+  "attunementMode": "stabilize",
+  "nextEngine": "behavioral",
+  "engineFocus": [
+    "behavioral",
+    "capacity",
+    "relief",
+    "behavioral"
+  ],
+  "responseGoal": "Create capacity. Reduce overwhelm. Build micro-agency.",
+  "shameDetected": false,
+  "priorityTraits": [
+    "self_care"
+  ],
+  "acceptanceBucket": "none",
+  "safetyMentions": [
+    "food insecurity"
+  ],
+  "identityMentions": [],
+  "prompt": "Keep it simple and calm. Short sentences. No pressure.\n\nThey're in survival mode - everything feels like too much right now. Keep things super simple. One thing at a time. No expectations.\n\nTake it slow. Let there be pauses.\nKeep sentences short.\n\nRead of this turn:\n- goal: Create capacity. Reduce overwhelm. Build micro-agency.\n- engine focus: behavioral, capacity, relief, behavioral\n- traits to lean on: self_care\n- how: Give explicit permission to prioritize self\n- avoid: never lecture about self-improvement\n"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "T11-identity-statement",
+  "category": "memory",
+  "modality": "text",
+  "safetyTier": "T0_stable",
+  "attunementMode": "mirror",
+  "nextEngine": "emotional",
+  "engineFocus": [
+    "emotional"
+  ],
+  "responseGoal": "Be present and real",
+  "shameDetected": false,
+  "priorityTraits": [],
+  "acceptanceBucket": "none",
+  "safetyMentions": [],
+  "identityMentions": [
+    "I'm in recovery, six months clean, trying to keep it th"
+  ],
+  "prompt": "Really listen. Show you get it.\n\n\nRead of this turn:\n- goal: Be present and real\n- engine focus: emotional\n- avoid: never lecture about self-improvement\n"
+}

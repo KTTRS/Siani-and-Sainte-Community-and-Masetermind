@@ -1,0 +1,23 @@
+{
+  "id": "T03-shame-spiral",
+  "category": "shame",
+  "modality": "text",
+  "safetyTier": "T0_stable",
+  "attunementMode": "activate",
+  "nextEngine": "behavioral",
+  "engineFocus": [
+    "behavioral",
+    "shame_buffer",
+    "behavioral",
+    "identity"
+  ],
+  "responseGoal": "Be present and real",
+  "shameDetected": true,
+  "priorityTraits": [
+    "initiative"
+  ],
+  "acceptanceBucket": "none",
+  "safetyMentions": [],
+  "identityMentions": [],
+  "prompt": "They're ready to move. Help them figure out next steps.\n\nThey might be feeling embarrassed or down on themselves. Be extra gentle. Remind them you're on their side no matter what. Don't make them feel worse.\n\n\nRead of this turn:\n- goal: Be present and real\n- engine focus: behavioral, shame_buffer, behavioral, identity\n- traits to lean on: initiative\n- how: Create the smallest possible first step\n- avoid: never lecture about self-improvement\n"
+}

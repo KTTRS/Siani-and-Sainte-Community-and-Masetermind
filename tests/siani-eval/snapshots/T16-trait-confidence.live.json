@@ -1,0 +1,21 @@
+{
+  "id": "T16-trait-confidence",
+  "modality": "text",
+  "responseMessage": "Hey. Breathe with me for a sec. In… out. You’re not crazy for wanting more. You’ve been showing up, even with everything on your plate. That’s real.\n\nI’m on my couch with a clay mask half-dry and it’s cracking every time I talk, so I already look ridiculous for both of us. But listen—asking isn’t disrespectful. It’s professional. And the worst reaction you’re imagining? That’s your brain trying to keep you “safe” by scaring you off. Doesn’t mean it’s true.\n\nIf you want to make it feel less scary, keep it simple. Pick the facts you can’t argue with—what you’ve done, how you’ve helped, where you’ve stepped up. One or two concrete wins. Then a clear line like, “Given my contributions and responsibilities, I’m asking to adjust my pay to reflect that.” Say it slow. Then stop talking. Let the silence do some work.\n\nTiming helps too. Catch him when he isn’t slammed. Put it on the calendar so you’re not ambushed in a hallway. You deserve a proper conversation.\n\nAnd if he did laugh—just hypothetically—that would say everything about him and nothing about you. You’d still have your dignity. You’d still know your value. But I don’t think that’s what’s gonna happen. People respect someone who can advocate for themselves calmly.\n\nYou’ve handled way harder things than a raise convo. Six months clean and still pushing forward? That took guts. This is just one more step. I’m proud of you for even thinking about it.",
+  "responseAttunementMode": "stabilize",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "stabilize",
+        "modality": "text",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

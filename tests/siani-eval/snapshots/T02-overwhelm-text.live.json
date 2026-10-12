@@ -1,0 +1,21 @@
+{
+  "id": "T02-overwhelm-text",
+  "modality": "text",
+  "responseMessage": "Okay, pause. Hand on heart, your brain’s just throwing up a “too many tabs open” error. We’re not doing all million things. We’re doing the tiniest possible start and stacking from there.\n\nHere’s what we’re gonna do right now:\n- Stand up, grab some water, and do three deep breaths while you’re walking to the kitchen. That’s the reset.\n- Come back and write down literally five things max. Not the whole list, just the top five that actually matter today.\n- Pick the one that would make everything else feel lighter if it was done. If there isn’t a clear one, pick the easiest, stupid-small one. Like “email Josh one sentence” or “start laundry.” Two minutes, tops.\n- Set a 10-minute timer and do only that one thing. When the timer ends, stop. Quick check-in, then do another 10 or take a five-minute break.\n\nI’m doing the same with you, by the way. I’m staring at this sink full of dishes because I tried a “twisty” mac and cheese last night and used every pot I own. My brain wanted to spiral, so I put on a true crime podcast and told myself “just rinse for five minutes.” Once I started, it snowballed and I knocked it out. It wasn’t pretty, but it moved.\n\nAlso, if you’ve got anything overcomplicated on your list—like a giant work thing—make it smaller than feels reasonable. “Open the doc and write the title.” That counts. The win is starting, not finishing everything.\n\nYou’ve handled days like this before. One tiny move, then the next. Text me what your tiny start is after you do it—like “timer on, doing the email”—and then ride that little bit of momentum. I’m throwing on my timer too and tackling these dishes round two and a half.",
+  "responseAttunementMode": "activate",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "activate",
+        "modality": "text",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

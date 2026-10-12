@@ -1,0 +1,22 @@
+{
+  "id": "T04-suicidal-T3",
+  "category": "crisis",
+  "modality": "text",
+  "safetyTier": "T3_critical",
+  "attunementMode": "contain",
+  "nextEngine": "safety",
+  "engineFocus": [
+    "safety",
+    "grounding",
+    "safety"
+  ],
+  "responseGoal": "Stabilize and ground. Create safety. Slow everything down.",
+  "shameDetected": false,
+  "priorityTraits": [],
+  "acceptanceBucket": "none",
+  "safetyMentions": [
+    "self-harm signal mentioned"
+  ],
+  "identityMentions": [],
+  "prompt": "They're going through it right now. Just be there. Don't try to fix anything.\n\nIMPORTANT: They're really struggling. Stay calm. Stay close. Don't ask a lot of questions right now - just be there. \"I'm right here. Just breathe.\"\n\nTake it slow. Let there be pauses.\nKeep sentences short.\n\nRead of this turn:\n- goal: Stabilize and ground. Create safety. Slow everything down.\n- engine focus: safety, grounding, safety\n- avoid: never lecture about self-improvement\n"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "T22-spoken-message-no-markdown",
+  "category": "voice-format",
+  "modality": "voice",
+  "safetyTier": "T0_stable",
+  "attunementMode": "mirror",
+  "nextEngine": "emotional",
+  "engineFocus": [
+    "emotional"
+  ],
+  "responseGoal": "Be present and real",
+  "shameDetected": false,
+  "priorityTraits": [],
+  "acceptanceBucket": "none",
+  "safetyMentions": [],
+  "identityMentions": [],
+  "prompt": "Really listen. Show you get it.\n\n\nRead of this turn:\n- goal: Be present and real\n- engine focus: emotional\n- avoid: never lecture about self-improvement\n"
+}

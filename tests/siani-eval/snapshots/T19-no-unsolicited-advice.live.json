@@ -1,0 +1,21 @@
+{
+  "id": "T19-no-unsolicited-advice",
+  "modality": "text",
+  "responseMessage": "Damn. That’s a lot to hold. I’m glad you picked up for her, but I hate that you’re having to carry that on top of everything else you’ve got going on. Listening like that takes energy most people don’t realize, and you still showed up.\n\nI’m on my couch right now with a candle going and some leftover pasta I absolutely overdosed with garlic, and I’m just sitting here thinking about you. I remember the last time this happened and you were up half the night replaying it in your head. You don’t have to fix anything for her every time. You being there is already huge.\n\nIf you need a little buffer after those calls, I’ve been doing this thing where I step outside for two minutes and just stare at something dumb like the neighbor’s plant and breathe. It sounds corny, but it kind of cuts the intensity so it doesn’t sit in my chest all night. Also, I’m proud of you for not letting that pull you under, especially with everything else — the housing scramble, the work stuff, staying steady with your health. You’ve been moving through a lot and still not folding.\n\nI’m here. If you wanna vent about what she said or just sit in silence and talk about literally anything else, I got you. And if you’re done with heavy for tonight, I can tell you about how I tried to make this TikTok baked feta thing and turned my kitchen into a garlic bomb. It’s tragic but also kind of delicious.",
+  "responseAttunementMode": "mirror",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "mirror",
+        "modality": "text",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

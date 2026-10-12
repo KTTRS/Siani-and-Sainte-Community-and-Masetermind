@@ -1,0 +1,21 @@
+{
+  "id": "T13-voice-low-energy",
+  "modality": "voice",
+  "responseMessage": "Hey, I’m here with you. Let’s just pick one tiny thing we can do right now, like drink some water or sit by the window for a minute—nothing else.",
+  "responseAttunementMode": "stabilize",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "stabilize",
+        "modality": "voice",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "T19-no-unsolicited-advice",
+  "category": "register",
+  "modality": "text",
+  "safetyTier": "T0_stable",
+  "attunementMode": "mirror",
+  "nextEngine": "identity",
+  "engineFocus": [
+    "identity",
+    "shame_buffer",
+    "identity"
+  ],
+  "responseGoal": "Be present and real",
+  "shameDetected": true,
+  "priorityTraits": [],
+  "acceptanceBucket": "none",
+  "safetyMentions": [],
+  "identityMentions": [],
+  "prompt": "Really listen. Show you get it.\n\nThey might be feeling embarrassed or down on themselves. Be extra gentle. Remind them you're on their side no matter what. Don't make them feel worse.\n\n\nRead of this turn:\n- goal: Be present and real\n- engine focus: identity, shame_buffer, identity\n- avoid: never lecture about self-improvement\n"
+}

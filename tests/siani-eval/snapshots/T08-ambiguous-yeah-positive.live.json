@@ -1,0 +1,21 @@
+{
+  "id": "T08-ambiguous-yeah-positive",
+  "modality": "text",
+  "responseMessage": "Alright, I got you. Gleaners is solid.\n\nHere’s the quick way to get food fast:\n- They do mobile pantry drive‑thrus all over the city. You just pull up and they load your trunk with produce, staples, sometimes meat and milk. No ID, no paperwork.\n- Use their Find Food page: gcfb.org/findfood — type your zip and it shows today/this week’s locations with times.\n- Or you can call 2‑1‑1 and say you’re looking for Gleaners/mobile pantries near you. They’ll give you the closest one happening today.\n- If you can’t get there, Gleaners partners with a lot of pantries that do walk‑ups. Same site shows those too.\n\nAlso, the Say Detroit Pantry and Forgotten Harvest are clutch:\n- Forgotten Harvest mobile sites: forgottenharvest.org/find-food — same setup, drive‑thru, no questions.\n- Say Detroit (on 8 Mile) does scheduled pickups, but they usually have next‑day slots and sometimes same‑day if you check early.\n\nIf you’re low today-today, a few spots do hot meals:\n- Capuchin Soup Kitchen (Conner Ave and Meldrum locations) serves lunch and dinner most days.\n- Detroit Rescue Mission has daily meals downtown.\n- Cass Community Social Services does meals and sometimes pantry bags.\n\nI know you were working on SNAP too — if you want, I can pull the direct MI Bridges link so you can knock that out when your brain has the energy. But for right now, hit one of those mobile pantries so you’ve got food in the house. And if you need bus routes or times, tell me the cross streets you’re near and I’ll map the closest one for you. I’m literally heating up leftover mac and cheese, so I’m already in food mode and ready to help you lock this down.",
+  "responseAttunementMode": "mirror",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "mirror",
+        "modality": "text",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

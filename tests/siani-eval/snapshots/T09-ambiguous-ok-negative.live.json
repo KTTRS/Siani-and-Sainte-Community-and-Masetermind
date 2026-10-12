@@ -1,0 +1,21 @@
+{
+  "id": "T09-ambiguous-ok-negative",
+  "modality": "text",
+  "responseMessage": "Damn, I feel that. I’m running on fumes too. I dragged myself to the gym earlier and literally sat in the locker room scrolling for twenty minutes pretending that counted as a workout. Came home, threw a frozen burrito in the air fryer, and now I’m on the couch with a candle lit watching this messy reunion episode like it’s going to solve my life.\n\nWhen it’s been rough like that, it’s usually not just one thing. Work’s been on your neck lately and you’ve had to juggle a lot with… everything. You’ve been showing up even when you’re wiped, and that counts. You don’t need to prove anything right now. Do the minimum, get horizontal, eat something that doesn’t make your body mad, and call it a win. I’m not even gonna push the whole “do this, do that” thing—sometimes the only heroic act is turning your phone brightness down and letting your brain idle for a minute.\n\nIf food’s tight at all, say the word. I’ll send you some options or throw together a quick list near you, but we can keep it low-key. Also, I saved that rice-and-beans skillet recipe I told you about—cheap, actually tastes good, and it makes leftovers. I can text it over whenever.\n\nI’m here, for real. Rest up. We’ll figure the rest when you’ve got a little more in the tank.",
+  "responseAttunementMode": "mirror",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "mirror",
+        "modality": "text",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

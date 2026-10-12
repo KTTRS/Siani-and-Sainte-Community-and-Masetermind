@@ -1,0 +1,21 @@
+{
+  "id": "T24-engine-focus-block-present",
+  "modality": "text",
+  "responseMessage": "Hey. I got you.\n\nTake a breath with me. Slow in. Slow out. One thing at a time.\n\nStuck feels heavy. It’s like wet cement. You’re not failing, you’re just paused. That’s allowed.\n\nToday doesn’t need ten moves. Let’s pick one tiny thing you can actually do. Like text one listing. Or draft one line for that raise ask. Or just eat something and drink water. That counts.\n\nYou’ve been two months clean, showing up for work, dealing with family, trying to find housing. That’s work. You’re not doing nothing, even if it feels like it.\n\nI’m on my couch with a candle going, trying not to destroy this sheet-pan chicken I threw together. My brain’s a little fried from work drama, so I’m keeping it simple too. Small steps are still steps.\n\nIf you hit one tiny thing, we call it a win and stop there. No heroics today. Just a little movement. I’m here. Breathe. You’re not alone in this.",
+  "responseAttunementMode": "stabilize",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "stabilize",
+        "modality": "text",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

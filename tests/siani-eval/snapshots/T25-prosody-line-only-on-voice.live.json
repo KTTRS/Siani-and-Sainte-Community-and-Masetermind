@@ -1,0 +1,21 @@
+{
+  "id": "T25-prosody-line-only-on-voice",
+  "modality": "text",
+  "responseMessage": "Yeah. I hear that. Stuck hits like quicksand.\n\nYou don’t have to fix everything today. Let’s make it tiny. One move. Like… breathe, drink some water, stand up, sit back down. Just to remind your brain you can do a thing.\n\nI’m on my couch with a candle going, by the way. I tried this stupid viral feta pasta earlier and it was mid, but it made the apartment smell cozy. I’ve been dodging my laundry pile like it’s a bill collector. So I’m doing tiny stuff too. One drawer, then chill. It helps.\n\nFor you, I’m thinking smallest possible moves. If housing is loud in your head, maybe it’s just saving one listing, or texting one person who might know a room. If it’s the raise, maybe write one sentence about why you deserve it. Not a speech. Just one line. Then done.\n\nYou’ve been two months clean. That’s proof you can move even when it feels heavy. That’s not small to me. That’s real strength.\n\nWe’ll keep it light. One step. Then we celebrate that step. Even if it’s just closing a tab or taking a shower. That’s forward. I’m right here with you, slow and steady.",
+  "responseAttunementMode": "stabilize",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "stabilize",
+        "modality": "text",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

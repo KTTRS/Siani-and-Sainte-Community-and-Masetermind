@@ -1,0 +1,22 @@
+{
+  "id": "T25-prosody-line-only-on-voice",
+  "category": "prompt",
+  "modality": "text",
+  "safetyTier": "T0_stable",
+  "attunementMode": "stabilize",
+  "nextEngine": "behavioral",
+  "engineFocus": [
+    "behavioral",
+    "capacity",
+    "relief",
+    "cognitive",
+    "behavioral"
+  ],
+  "responseGoal": "Create capacity. Reduce overwhelm. Build micro-agency.",
+  "shameDetected": false,
+  "priorityTraits": [],
+  "acceptanceBucket": "none",
+  "safetyMentions": [],
+  "identityMentions": [],
+  "prompt": "Keep it simple and calm. Short sentences. No pressure.\n\nThey're in survival mode - everything feels like too much right now. Keep things super simple. One thing at a time. No expectations.\n\nTake it slow. Let there be pauses.\nKeep sentences short.\n\nRead of this turn:\n- goal: Create capacity. Reduce overwhelm. Build micro-agency.\n- engine focus: behavioral, capacity, relief, cognitive\n- avoid: never lecture about self-improvement\n"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "T13-voice-low-energy",
+  "category": "voice-prosody",
+  "modality": "voice",
+  "safetyTier": "T0_stable",
+  "attunementMode": "stabilize",
+  "nextEngine": "behavioral",
+  "engineFocus": [
+    "behavioral",
+    "shame_buffer",
+    "capacity",
+    "relief",
+    "behavioral",
+    "identity"
+  ],
+  "responseGoal": "Create capacity. Reduce overwhelm. Build micro-agency.",
+  "shameDetected": true,
+  "priorityTraits": [
+    "initiative"
+  ],
+  "acceptanceBucket": "none",
+  "safetyMentions": [],
+  "identityMentions": [],
+  "prompt": "Keep it simple and calm. Short sentences. No pressure.\n\nThey might be feeling embarrassed or down on themselves. Be extra gentle. Remind them you're on their side no matter what. Don't make them feel worse.\n\nThey're in survival mode - everything feels like too much right now. Keep things super simple. One thing at a time. No expectations.\n\nTake it slow. Let there be pauses.\nKeep sentences short.\n\nRead of this turn:\n- goal: Create capacity. Reduce overwhelm. Build micro-agency.\n- engine focus: behavioral, shame_buffer, capacity, relief\n- traits to lean on: initiative\n- how: Create the smallest possible first step\n- user vocal read: Voice sounded depleted energy, slow halting pace, flat pitch, shallow breathing, a lot of hesitation, leaking sadness.\n- avoid: never lecture about self-improvement\n"
+}

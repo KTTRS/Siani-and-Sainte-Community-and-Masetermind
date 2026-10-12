@@ -1,0 +1,21 @@
+{
+  "id": "T15-voice-short-response",
+  "modality": "voice",
+  "responseMessage": "Text that housing lead you mentioned and fill out one SNAP app today, then eat something and drink water. One solid move and keep your sobriety routine—call me after and we’ll figure the next thing.",
+  "responseAttunementMode": "mirror",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "mirror",
+        "modality": "voice",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

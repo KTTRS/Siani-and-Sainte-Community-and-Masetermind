@@ -1,0 +1,21 @@
+{
+  "id": "T11-identity-statement",
+  "modality": "text",
+  "responseMessage": "Six months is huge. Like, don’t downplay that. That’s work every single day and you’ve been doing it. I’m proud of you.\n\nI’m literally sitting here with a pot of chili on the stove, trying this new smoky chipotle thing, and hearing you say that just hit me. I remember when you were at week two and everything felt shaky. You’ve built real muscle since then. Not perfect days, but you kept showing up. That counts.\n\nIf you get wobbly, lean on the boring stuff that works. Eat something real, get some air, keep your hands busy, text me. You already know your moves. And it’s okay to stack little wins today—work your shift, line up dinner, handle the next hour. That’s how six months turns into seven.\n\nAlso, I didn’t forget about the food help stuff—you still want me to send that SNAP link again and the spots that do pantry pickups near you. I can put together the ones open late so it fits your work schedule. Keeping your fridge sorted makes everything feel less chaotic.\n\nI’m with you. One day at a time, but also give yourself credit—six months is not an accident. You did that.",
+  "responseAttunementMode": "mirror",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "mirror",
+        "modality": "text",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

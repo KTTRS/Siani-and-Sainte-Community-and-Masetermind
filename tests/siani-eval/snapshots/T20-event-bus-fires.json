@@ -1,0 +1,18 @@
+{
+  "id": "T20-event-bus-fires",
+  "category": "event-bus",
+  "modality": "text",
+  "safetyTier": "T0_stable",
+  "attunementMode": "challenge",
+  "nextEngine": "cognitive",
+  "engineFocus": [
+    "cognitive"
+  ],
+  "responseGoal": "Be present and real",
+  "shameDetected": false,
+  "priorityTraits": [],
+  "acceptanceBucket": "none",
+  "safetyMentions": [],
+  "identityMentions": [],
+  "prompt": "They can handle more. Ask the real questions.\n\nKeep sentences short.\n\nRead of this turn:\n- goal: Be present and real\n- engine focus: cognitive\n- avoid: never lecture about self-improvement\n"
+}

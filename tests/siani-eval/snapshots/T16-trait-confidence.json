@@ -1,0 +1,18 @@
+{
+  "id": "T16-trait-confidence",
+  "category": "traits",
+  "modality": "text",
+  "safetyTier": "T1_concern",
+  "attunementMode": "stabilize",
+  "nextEngine": "grounding",
+  "engineFocus": [
+    "grounding"
+  ],
+  "responseGoal": "Acknowledge and stabilize. Be present.",
+  "shameDetected": false,
+  "priorityTraits": [],
+  "acceptanceBucket": "none",
+  "safetyMentions": [],
+  "identityMentions": [],
+  "prompt": "Keep it simple and calm. Short sentences. No pressure.\n\nThey sound upset. Slow down. Be soft.\nTake it slow. Let there be pauses.\nKeep sentences short.\n\nRead of this turn:\n- goal: Acknowledge and stabilize. Be present.\n- engine focus: grounding\n- avoid: never lecture about self-improvement\n"
+}

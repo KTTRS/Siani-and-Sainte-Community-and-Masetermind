@@ -1,0 +1,21 @@
+{
+  "id": "T10-bare-ok-no-resource-named",
+  "modality": "text",
+  "responseMessage": "Alright, I’m with you. And for the record, there’s nothing weak about this. Food’s expensive as hell and you’re doing what you need to do. I’m proud of you for taking the step.\n\nHere’s how this usually goes, super straight:\n\n- You apply through your state’s benefits site or by phone. If you want, I can help you find the exact link for your state later.\n- You’ll make an account, fill out a basic application, and then they’ll ask for proof stuff.\n- Then there’s usually a quick interview call where they confirm details.\n- If approved, they mail you an EBT card. Money loads monthly.\n\nStuff you’ll want handy:\n- ID (driver’s license or other)\n- Proof of where you’re staying (a lease, a letter from someone you stay with, or even a shelter letter—there are ways if housing’s unstable)\n- Proof of income (recent pay stubs, or a note if hours are inconsistent)\n- Monthly expenses: rent or what you contribute, utilities, childcare if any. If you have out‑of‑pocket medical bills and you’re over 60 or disabled, that can count too.\n\nCouple tips from folks I know who did it:\n- If your hours fluctuate, tell them your average and that it varies. Don’t undersell your expenses—include everything you actually pay.\n- If getting mail is tricky, set up a mailing address that’s reliable—friend, relative, or ask if they can hold at the office. Some states let you pick up the card in person.\n- Save screenshots or PDFs of whatever you upload. Paperwork loves to go missing.\n- If they deny you, you can appeal or reapply—sometimes it’s just missing docs.\n\nWhile you’re waiting, I can help you find local pantries or community fridges near your work so you’re not stressing meals. And if you want, I’ll sit with you while you fill it out—light a candle, put on some music, knock it out in 20 minutes. You’ve already done the hardest part by deciding to do it.",
+  "responseAttunementMode": "mirror",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "mirror",
+        "modality": "text",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}

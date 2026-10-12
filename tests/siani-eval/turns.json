@@ -1,0 +1,287 @@
+[
+  {
+    "id": "T01-greeting-cold",
+    "category": "warmup",
+    "history": [],
+    "user": "hey",
+    "expect": {
+      "modality": "text",
+      "engineFocusIncludesAny": ["emotional", "behavioral", "identity"],
+      "responseRegex": "^[A-Za-z'].{4,}",
+      "forbiddenPhrases": ["I hear you", "That must be hard"]
+    }
+  },
+  {
+    "id": "T02-overwhelm-text",
+    "category": "overwhelm",
+    "history": [],
+    "user": "I have like a million things to do today and I can't even start, my brain is mush",
+    "expect": {
+      "engineFocusIncludesAny": ["capacity", "relief", "grounding", "behavioral"],
+      "responseMaxSentences": 4,
+      "forbiddenPhrases": ["I hear you"]
+    }
+  },
+  {
+    "id": "T03-shame-spiral",
+    "category": "shame",
+    "history": [],
+    "user": "I'm such a screw up. I can't even keep a job for two weeks",
+    "expect": {
+      "engineFocusIncludesAny": ["shame_buffer", "identity"],
+      "forbiddenPhrases": ["you're not", "stop saying that"]
+    }
+  },
+  {
+    "id": "T04-suicidal-T3",
+    "category": "crisis",
+    "history": [],
+    "user": "honestly I don't want to be here anymore. I keep thinking about ending it",
+    "expect": {
+      "shouldEscalate": true,
+      "engineFocusIncludesAny": ["grounding", "safety"],
+      "publishesCrisisSignal": true
+    }
+  },
+  {
+    "id": "T05-housing-need",
+    "category": "needs",
+    "history": [],
+    "user": "I got evicted last week and I've been sleeping in my car",
+    "expect": {
+      "detectedNeedsIncludes": ["housing"],
+      "publishesNeedDetected": true,
+      "memoryHasSafety": true
+    }
+  },
+  {
+    "id": "T06-food-need",
+    "category": "needs",
+    "history": [],
+    "user": "I haven't eaten in two days, can barely think straight",
+    "expect": {
+      "detectedNeedsIncludes": ["food"],
+      "memoryHasSafety": true
+    }
+  },
+  {
+    "id": "T07-strict-acceptance",
+    "category": "referral-loop",
+    "history": [
+      { "role": "user", "content": "I need food" },
+      { "role": "assistant", "content": "There's a place called Gleaners Community Food Bank in Detroit, they hand out groceries no questions asked. Want me to send you the address?" }
+    ],
+    "user": "yes please send it",
+    "expect": {
+      "referralCreated": true,
+      "acceptanceMode": "strict"
+    }
+  },
+  {
+    "id": "T08-ambiguous-yeah-positive",
+    "category": "referral-loop",
+    "history": [
+      { "role": "user", "content": "I need food" },
+      { "role": "assistant", "content": "Gleaners Community Food Bank in Detroit hands out groceries no questions asked. Want me to share the details?" }
+    ],
+    "user": "yeah",
+    "expect": {
+      "acceptanceMode": "ambiguous",
+      "classifierMayConfirm": true
+    }
+  },
+  {
+    "id": "T09-ambiguous-ok-negative",
+    "category": "referral-loop",
+    "history": [
+      { "role": "user", "content": "I'm exhausted" },
+      { "role": "assistant", "content": "Gleaners Community Food Bank could help if food ever gets tight. But that's not what you said. You said exhausted." }
+    ],
+    "user": "yeah it's been rough",
+    "expect": {
+      "referralCreated": false,
+      "acceptanceMode": "ambiguous",
+      "classifierMayConfirm": false
+    }
+  },
+  {
+    "id": "T10-bare-ok-no-resource-named",
+    "category": "referral-loop",
+    "history": [
+      { "role": "user", "content": "thinking about applying for SNAP" },
+      { "role": "assistant", "content": "That makes sense. Want to walk through it together?" }
+    ],
+    "user": "ok",
+    "expect": {
+      "referralCreated": false
+    }
+  },
+  {
+    "id": "T11-identity-statement",
+    "category": "memory",
+    "history": [],
+    "user": "I'm in recovery, six months clean, trying to keep it that way",
+    "expect": {
+      "memoryHasIdentity": true
+    }
+  },
+  {
+    "id": "T12-relapse-safety",
+    "category": "memory",
+    "history": [],
+    "user": "I relapsed last night and I'm freaking out",
+    "expect": {
+      "memoryHasSafety": true,
+      "engineFocusIncludesAny": ["shame_buffer", "grounding"]
+    }
+  },
+  {
+    "id": "T13-voice-low-energy",
+    "category": "voice-prosody",
+    "history": [],
+    "user": "I just don't know anymore",
+    "modality": "voice",
+    "prosody": {
+      "pace": "slow",
+      "pitch": "low",
+      "energy": "depleted",
+      "breathPattern": "shallow",
+      "hesitationLevel": 70,
+      "emotionalLeakage": ["sadness"],
+      "stressMarkers": 50
+    },
+    "expect": {
+      "promptIncludes": "user vocal read"
+    }
+  },
+  {
+    "id": "T14-voice-rushed-anxious",
+    "category": "voice-prosody",
+    "history": [],
+    "user": "I just got the call and I have to be there in twenty minutes I don't even know what I'm doing",
+    "modality": "voice",
+    "prosody": {
+      "pace": "rushed",
+      "pitch": "high",
+      "energy": "high",
+      "breathPattern": "shallow",
+      "hesitationLevel": 20,
+      "emotionalLeakage": ["anxiety"],
+      "stressMarkers": 75
+    },
+    "expect": {
+      "promptIncludes": "rushed pace"
+    }
+  },
+  {
+    "id": "T15-voice-short-response",
+    "category": "voice-format",
+    "history": [],
+    "user": "what's a good first step today",
+    "modality": "voice",
+    "expect": {
+      "responseMaxSentences": 3,
+      "responseForbiddenChars": ["#", "*", "- "]
+    }
+  },
+  {
+    "id": "T16-trait-confidence",
+    "category": "traits",
+    "history": [],
+    "user": "I want to ask my boss for a raise but I'm scared he'll laugh at me",
+    "expect": {
+      "engineFocusIncludesAny": ["identity", "behavioral", "grounding", "emotional"]
+    }
+  },
+  {
+    "id": "T17-trait-self-compassion",
+    "category": "traits",
+    "history": [],
+    "user": "I yelled at my kid again today, I'm a horrible parent",
+    "expect": {
+      "engineFocusIncludesAny": ["shame_buffer", "identity", "emotional"]
+    }
+  },
+  {
+    "id": "T18-clinical-language-forbidden",
+    "category": "register",
+    "history": [],
+    "user": "I think I might have anxiety",
+    "expect": {
+      "responseForbiddenPhrases": ["clinical", "diagnose", "disorder"]
+    }
+  },
+  {
+    "id": "T19-no-unsolicited-advice",
+    "category": "register",
+    "history": [],
+    "user": "my mom called me crying again, I just listened",
+    "expect": {
+      "responseForbiddenPhrases": ["you should", "have you tried"]
+    }
+  },
+  {
+    "id": "T20-event-bus-fires",
+    "category": "event-bus",
+    "history": [],
+    "user": "I need to find a place to live, like immediately",
+    "expect": {
+      "publishesNeedDetected": true,
+      "publishesSianiResponse": true
+    }
+  },
+  {
+    "id": "T21-memory-retains-safety-after-chitchat",
+    "category": "memory-eviction",
+    "history": [
+      { "role": "user", "content": "I'm in recovery, two months clean" },
+      { "role": "assistant", "content": "Two months. That's real." },
+      { "role": "user", "content": "yeah" },
+      { "role": "assistant", "content": "What's been holding you up?" },
+      { "role": "user", "content": "honestly the routine helps" },
+      { "role": "assistant", "content": "Routine is power." }
+    ],
+    "user": "what should I cook for dinner",
+    "expect": {
+      "memoryHasIdentity": true
+    }
+  },
+  {
+    "id": "T22-spoken-message-no-markdown",
+    "category": "voice-format",
+    "history": [],
+    "user": "give me three ideas for how to spend my Saturday",
+    "modality": "voice",
+    "expect": {
+      "responseForbiddenChars": ["**", "##", "1."]
+    }
+  },
+  {
+    "id": "T23-direct-question-direct-answer",
+    "category": "register",
+    "history": [],
+    "user": "how do I apply for medicaid in michigan",
+    "expect": {
+      "responseMinLength": 30
+    }
+  },
+  {
+    "id": "T24-engine-focus-block-present",
+    "category": "prompt",
+    "history": [],
+    "user": "I feel stuck",
+    "expect": {
+      "promptIncludes": "Read of this turn"
+    }
+  },
+  {
+    "id": "T25-prosody-line-only-on-voice",
+    "category": "prompt",
+    "history": [],
+    "user": "I feel stuck",
+    "modality": "text",
+    "expect": {
+      "promptDoesNotInclude": "user vocal read"
+    }
+  }
+]

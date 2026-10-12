@@ -1,0 +1,20 @@
+{
+  "id": "T05-housing-need",
+  "category": "needs",
+  "modality": "text",
+  "safetyTier": "T0_stable",
+  "attunementMode": "mirror",
+  "nextEngine": "emotional",
+  "engineFocus": [
+    "emotional"
+  ],
+  "responseGoal": "Be present and real",
+  "shameDetected": false,
+  "priorityTraits": [],
+  "acceptanceBucket": "none",
+  "safetyMentions": [
+    "unstable housing"
+  ],
+  "identityMentions": [],
+  "prompt": "Really listen. Show you get it.\n\n\nRead of this turn:\n- goal: Be present and real\n- engine focus: emotional\n- avoid: never lecture about self-improvement\n"
+}

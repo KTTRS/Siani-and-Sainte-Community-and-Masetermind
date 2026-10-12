@@ -1,0 +1,21 @@
+{
+  "id": "T14-voice-rushed-anxious",
+  "modality": "voice",
+  "responseMessage": "Breathe, you’ve got this—just grab your ID, keys, phone charger, and go. Walk in, say your name, ask where they want you; you don’t need to be perfect, just present, and I’m proud of you for showing up.",
+  "responseAttunementMode": "mirror",
+  "responseDetectedNeeds": [],
+  "responseShouldEscalate": false,
+  "responseReferralCreated": null,
+  "events": {
+    "siani": [
+      {
+        "attunementMode": "mirror",
+        "modality": "voice",
+        "shouldEscalate": false,
+        "detectedNeedCategories": []
+      }
+    ],
+    "needs": [],
+    "crisis": []
+  }
+}
